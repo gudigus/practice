@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<script type="text/javascript">
+	function chk() {
+		for(var i=0;i<frm.movie.length;i++){
+			if(frm.movie[i].checked)
+				return true;
+		}
+		alert("check anything");
+		return false;
+	}
+</script>
+<body>
+	<h1>Select your Favorite Movies</h1>
+	<form action="Movie" method="post" name="frm" onsubmit="return chk()">
+		<label>Batman</label> <input type="checkbox" value="batman"
+			name="movie"><br> <label>Superman</label> <input
+			type="checkbox" value="superman" name="movie"><br> <label>HoBreadman</label>
+		<input type="checkbox" value="hobreadman" name="movie"><br>
+		<label>Ironman</label> <input type="checkbox" value="ironman"
+			name="movie"><br> <label>Spiderman</label> <input
+			type="checkbox" value="spiderman" name="movie">
+		<p>
+			<input type="submit" value="comfirm">
+	</form>
+</body>
+</html>

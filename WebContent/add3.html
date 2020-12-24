@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<script type="text/javascript">
+	function chk() {
+		if(!frm.num.value){
+			alert("입력안하니?");
+			frm.num.focus();
+			return false;
+		}
+		if(isNaN(frm.num.value)){
+			alert("숫자만 입력해!");
+			frm.num.focus();
+			frm.num.value="";
+			return false;
+		}
+		return true;
+	}
+</script>
+<body>
+	<h1>Input Number</h1>
+	<form action="Add3" name="frm" onsubmit="return chk()">
+		Number : <input type="text" name="num">
+		 <input type="submit"	value="comfirm">
+	</form>
+</body>
+</html>

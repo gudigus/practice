@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<script type="text/javascript">
+	function chk(){
+		if(!frm.num1.value){
+			alert("Input Value!!!");
+			frm.num1.focus();
+			return false;
+		}
+		if(!frm.num2.value){
+			alert("Input Value!!!");
+			frm.num2.focus();
+			return false;
+		}
+		if(isNaN(frm.num1.value)){
+			alert("Input Only Number!!!");
+			frm.num1.focus();
+			return false;
+		}
+		if(isNaN(frm.num2.value)){
+			alert("Input Only Number!!!");
+			frm.num2.focus();
+			return false;
+		}
+		return true;
+	} 
+</script>
+<body>
+	<h1>Please Input Two Numbers to Operate</h1>
+	<form action="Num" name="frm" method="get" onsubmit="return chk()">
+		<label>First Number : </label>
+		<input type="text" name="num1"><p>
+		<label>Second Number : </label>
+		<input type="text" name="num2"><p>
+		<input type="submit" value="confirm">
+	</form>
+</body>
+</html>
